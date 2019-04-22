@@ -1,29 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#ddd"
+    android:gravity="center"
     android:orientation="vertical"
+    android:padding="20dp"
     tools:context=".fragments.FirstFragment">
 
-
-    <EditText
-        android:id="@+id/etFirstNum"
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="number"
-        android:text="Name" />
+        android:layout_marginBottom="40dp"
+        android:text="Calculate Sum"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        android:textStyle="bold" />
 
-    <EditText
-        android:id="@+id/etSecondNum"
+    <android.support.v7.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="number"
-        android:text="Name" />
+        app:cardCornerRadius="5dp">
 
-    <Button
-        android:id="@+id/btnAdd"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Add" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <EditText
+                android:id="@+id/etFirstNum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:hint="Enter First Number"
+                android:inputType="number"
+                android:paddingLeft="5dp"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/etSecondNum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Second Number"
+                android:inputType="number"
+                android:paddingLeft="5dp"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/btnAdd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Add" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
 </LinearLayout>
